@@ -1,19 +1,17 @@
-
 // getting Elements by ClassName and creating arrays from them
 let num = document.getElementsByClassName("numbers");
 let numArray = Array.from(num);
 let operator = document.getElementsByClassName("operators");
 let operatorArray = Array.from(operator);
 
-
-// getting Elements by Id 
+// getting Elements by Id
 let result = document.getElementById("result");
 let firstWindow = document.getElementById("firstWindow");
 let mathOperators = document.getElementById("mathOperators");
 let equal = document.getElementById("equal");
 let reset = document.getElementById("reset");
 let dot = document.getElementById("dot");
-
+let table = document.getElementById("table");
 
 // creating variable to store data in
 let inputs = [];
@@ -24,8 +22,7 @@ mathOperators.value = null;
 result.value = null;
 
 
-
-// first I map over the operators, and make sure I can click and assign values
+ // first I map over the operators, and make sure I can click and assign values
 operatorArray.map(
   (e) =>
     (e.onclick = () => {
@@ -200,3 +197,4 @@ reset.onclick = () => {
   equal.disabled = false;
   dot.disabled = false;
 };
+
